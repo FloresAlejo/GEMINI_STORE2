@@ -191,6 +191,8 @@ INICIO DEL HOME
     width: 90%;
     margin: auto;
     border-radius: 50%;
+    border: 4px solid var(--color-blanco);
+    box-shadow:0 0 6px  rgba(0, 0, 0, .5);
     background-image: url(imagenes/home/foto_inicio.png);
     background-position: center;
     background-size: cover;
@@ -234,13 +236,149 @@ INICIO DEL HOME
 
 /* 
 /////////////////////////////////////////////////////
-SEGUNDA SECCION(REDES)
+SLIDER CON CONTENIDO
+/////////////////////////////////////////////////////
+*/ 
+
+.slidercontenido{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: var(--color-naranja);
+    text-align: center;
+
+    padding: 1rem 0;
+    margin: 4rem 0;
+}
+
+@media only screen and (min-width: 480px){
+    .slidercontenido{
+        width: 80%;
+        margin:4rem auto;
+    }
+}
+
+@media only screen and (min-width: 960px){
+    .slidercontenido{
+        width: 80%;
+        margin:4rem auto;
+    }
+}
+
+.slidercontenido ul{
+    display: flex;
+}
+
+.slider2 ul{
+    width: 300%;
+    animation: slider2 10s infinite alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes slider2{
+    0% {margin-left: 0;}
+    30% {margin-left: 0;}
+    
+    35% {margin-left: -100%;}
+    65% {margin-left: -100%;}
+
+    70% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+}
+
+.slidercontenido li{
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+}
+
+.contenedorimg{
+    width: 100%;
+    height: auto;
+    padding: 0.4rem 0.4rem 0.1rem 0.4rem;
+    margin: 0;
+    background-color: var(--color-blanco);
+    box-shadow:0 0 6px  rgba(0, 0, 0, .5);
+}
+
+@media only screen and (min-width: 480px){
+    .contenedorimg{
+        width: 80%;
+        align-items: center;
+    }
+    }
+
+@media only screen and (min-width: 960px){
+    .contenedorimg{
+        width: 40%;
+        align-items: center;
+    }
+    }
+
+.contenedorimg img{
+    width: 100%;
+    height: max-content;
+    background-color: var(--color-blanco);
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor_li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 960px){
+    .contenedor_li{
+        flex-direction: row;
+    };
+    }
+
+
+.contenido{
+    width: 95%;
+    height: 400px;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 960px){
+    .contenido{
+        width: 40%;
+        align-items: center;
+    }
+    }
+
+.contenido > h2{
+    padding-bottom: 2rem;
+}
+
+.contenido > p{
+    padding-bottom: 1.2rem;
+}
+
+.contenido > a{
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 6rem;
+    text-decoration: none;
+    
+}
+
+/* 
+/////////////////////////////////////////////////////
+REDES
 /////////////////////////////////////////////////////
 */ 
 
 .imgHomeCon{
     width: 100%;
     height: auto;
+    
 }
 
 @media only screen and (min-width: 480px){
@@ -263,10 +401,11 @@ SEGUNDA SECCION(REDES)
 }
 
 .contenedor_redes{
-    background-color: var(--color-naranja);
+    background-color: var(--color-blanco);
     font-size: 2rem;
     text-align: center;
     margin: auto;
+    padding-bottom:  5rem;
 }
 
 @media only screen and (min-width: 480px){
@@ -277,7 +416,6 @@ SEGUNDA SECCION(REDES)
 
 @media only screen and (min-width: 960px){
     .contenedor_redes{
-        padding-top: 3rem;
         display: flex;
         flex-direction:row;
         max-width: 1200px;
@@ -311,13 +449,16 @@ SEGUNDA SECCION(REDES)
 }
 
 .imgHomeCon-destok{
-    display: none;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
 }
 
 @media only screen and (min-width: 960px){
     .imgHomeCon-destok{
         display: flex;
         width: 400px;
+        box-shadow:0 0 6px  rgba(0, 0, 0, .5);
     }
 }
 
@@ -327,19 +468,22 @@ SEGUNDA SECCION(REDES)
     }
 }
 
+.imgHome-destok{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 /* 
 /////////////////////////////////////////////////////
-TERCERA SECCION(SLIDER)
+SLIDER AUTOMATICO
 /////////////////////////////////////////////////////
 */ 
-
-
 
 .cuerpo-slider-blanco{
     background-color: var(--color-blanco);
     width: 100%;
     height: max-content;
-    padding: 1rem 0;
+    padding: 0;
 }
 
 .slider{
